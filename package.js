@@ -1,29 +1,25 @@
-var where = 'client';
 
 Package.describe({
-  name: 'lookback:seo',
-  summary: 'Automatically add meta, OpenGraph and Twitter tags from your Iron Router routes.',
-  version: '1.1.3',
-  git: 'http://github.com/lookback/meteor-seo'
+	name: 'lookback:seo',
+	summary: 'Automatically add meta, OpenGraph and Twitter tags from your Iron Router routes.',
+	version: '1.1.4',
+	git: 'http://github.com/lookback/meteor-seo',
 });
 
-Package.onUse(function(api) {
-  api.versionsFrom('METEOR@0.9.3');
+Package.onUse(function (api) {
+	api.versionsFrom('METEOR@1.8.1');
 
-  api.imply('yasinuslu:blaze-meta@0.3.1', where);
+	api.imply('yasinuslu:blaze-meta@0.3.4', 'client');
 
-  api.use([
-    'mongo',
-    'coffeescript',
-    'tracker',
-    'underscore',
-    'check',
-    'jquery',
-    'iron:router@1.0.7'
-  ], where);
+	api.use([
+		'ecmascript',
+		'mongo',
+		'tracker',
+		'underscore',
+		'check',
+		'jquery',
+		'iron:router',
+	], 'client');
 
-  api.addFiles([
-    'lib/router-utils.coffee',
-    'lib/router.coffee'
-  ], where);
+	api.mainModule('lib/router.js', 'client');
 });
