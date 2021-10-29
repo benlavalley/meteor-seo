@@ -7,7 +7,7 @@ Package.describe({
 });
 
 Package.onUse(function (api) {
-	api.versionsFrom('METEOR@1.8.1');
+	api.versionsFrom('METEOR@2.5');
 
 	api.imply('yasinuslu:blaze-meta@0.3.4', 'client');
 

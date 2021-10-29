@@ -7,7 +7,7 @@ Package.describe({
 
 Package.onUse(function (api) {
 	api.use("coffeescript", ["client", "server"]);
-	api.add_files("tests/mocha/client/_wait-for-router.js",["client"]);
-	api.add_files("tests/mocha/client/chai-jquery.js",["client"]);
-	api.add_files("tests/mocha/client/RouterSpec.coffee",["client"]);
+	api.addFiles("tests/mocha/client/_wait-for-router.js",["client"]);
+	api.addFiles("tests/mocha/client/chai-jquery.js",["client"]);
+	api.addFiles("tests/mocha/client/RouterSpec.coffee",["client"]);
 });
